@@ -1,5 +1,7 @@
+import ListItemBlock from "./components/ListItemBlock";
+
 function App() {
- return <div>CCT Lab Process</div>;
+ return <ListItemBlock />;
 }
 
 export default App;
