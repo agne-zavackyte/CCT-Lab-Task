@@ -36,6 +36,7 @@ export const TaskId = styled.span`
 
 export const List = styled.ul`
  width: 100%;
+ display: ${(props) => (props.isActive ? "block" : "none")};
  margin: 0;
  margin-left: -8px;
  list-style: none;
