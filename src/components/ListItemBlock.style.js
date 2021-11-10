@@ -3,8 +3,8 @@ import checkmark from "../assets/checkmark.png";
 
 export const TaskBlock = styled.div`
  width: 100%;
- display: flex;
  position: relative;
+ display: flex;
  align-items: center;
 
  :not(:last-child) {
@@ -48,10 +48,12 @@ export const TaskId = styled.span`
 
 export const List = styled.ul`
  width: 100%;
- display: ${(props) => (props.isActive ? "block" : "none")};
+ max-height: ${(props) => (props.isActive ? "300px" : "0")};
  margin: 0;
  margin-left: -8px;
  list-style: none;
+ opacity: ${(props) => (props.isActive ? "1" : "0")};
+ transition: max-height 0.5s, opacity 0.4s ease-in-out;
  box-sizing: border-box;
 `;
 
