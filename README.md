@@ -3,10 +3,11 @@
 
 CCT Internship Test Task.
 
+
 ## 🛠 Created with
 
 - [React.JS](https://reactjs.org/docs/getting-started.html)
-- [Typescript](https://www.typescriptlang.org/docs/)
+- [TypeScript](https://www.typescriptlang.org/docs/)
 - [styled-components](https://styled-components.com/docs)
 
 
