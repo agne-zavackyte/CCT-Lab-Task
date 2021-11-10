@@ -5,7 +5,7 @@ const ListItemBlock = () => {
  const [display, setDisplay] = useState(false);
  return (
   <>
-   <S.TaskBlock onClick={() => setDisplay(!display)}>
+   <S.TaskBlock isActive={display} onClick={() => setDisplay(!display)}>
     <S.TaskId>1</S.TaskId>
     <div>Title</div>
    </S.TaskBlock>
