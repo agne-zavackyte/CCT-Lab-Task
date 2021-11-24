@@ -2,9 +2,9 @@ import { useState } from "react";
 import * as S from "./ListItemBlock.style";
 
 const ListItemBlock = (prop: {
- processList: { id: any | number; title: string; tasks: string[] }[];
+ processList: { id: number; title: string; tasks: string[] }[];
 }) => {
- const [selection, setSelection] = useState(null);
+ const [selection, setSelection] = useState<number | null>(null);
 
  return (
   <>
@@ -22,10 +22,7 @@ const ListItemBlock = (prop: {
 
      <S.List isActive={listItem.id === selection}>
       {listItem.tasks.map((item) => (
-       <S.ListItem
-        key={item}
-        dangerouslySetInnerHTML={{ __html: item }}
-       ></S.ListItem>
+       <S.ListItem key={item} dangerouslySetInnerHTML={{ __html: item }} />
       ))}
      </S.List>
     </div>
