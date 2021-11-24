@@ -1,3 +1,5 @@
+const link = `careers@cornercasetech.com`;
+
 export const ProcessListData = [
  {
   id: 1,
@@ -9,7 +11,8 @@ export const ProcessListData = [
   title: "Submit your test task",
   tasks: [
    "Open email client",
-   "Sent link with information to careers@cornercasetech.com",
+   `Sent link with information to <a href="mailto:${link}">careers@cornercasetech.com</a>  
+  `,
   ],
  },
  {
