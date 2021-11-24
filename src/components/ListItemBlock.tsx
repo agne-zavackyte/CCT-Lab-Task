@@ -6,7 +6,7 @@ const ListItemBlock = (prop: {
 }) => {
  const [selection, setSelection] = useState<number | null>(null);
  const [checked, setChecked] = useState<string[]>([]);
-
+ console.log(checked);
  return (
   <>
    {prop.processList.map((listItem) => (
@@ -24,23 +24,21 @@ const ListItemBlock = (prop: {
 
      <S.List isActive={listItem.id === selection}>
       {listItem.tasks.map((item, index) => (
-       <S.ListItem
-        isChecked={checked.includes(item)}
-        onClick={() => {
-         setChecked(
-          checked.indexOf(item) === -1
-           ? [...checked, item]
-           : [...checked].filter((value) => value !== item)
-         );
-        }}
-        key={index}
-       >
+       <S.ListItem isChecked={checked.includes(item)} key={index}>
         <S.Checkbox
          type="checkbox"
          value={item}
+         id={item}
          checked={checked.includes(item)}
+         onChange={() =>
+          setChecked(
+           checked.indexOf(item) === -1
+            ? [...checked, item]
+            : [...checked].filter((value) => value !== item)
+          )
+         }
         />
-        <label dangerouslySetInnerHTML={{ __html: item }} />
+        <label htmlFor={item} dangerouslySetInnerHTML={{ __html: item }} />
        </S.ListItem>
       ))}
      </S.List>
