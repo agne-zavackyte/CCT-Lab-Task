@@ -6,7 +6,7 @@ const ListItemBlock = (prop: {
 }) => {
  const [selection, setSelection] = useState<number | null>(null);
  const [checked, setChecked] = useState<string[]>([]);
- console.log(checked);
+
  return (
   <>
    {prop.processList.map((listItem) => (
@@ -38,7 +38,7 @@ const ListItemBlock = (prop: {
           )
          }
         />
-        <label htmlFor={item} dangerouslySetInnerHTML={{ __html: item }} />
+        <S.Label htmlFor={item} dangerouslySetInnerHTML={{ __html: item }} />
        </S.ListItem>
       ))}
      </S.List>
