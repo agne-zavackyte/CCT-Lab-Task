@@ -78,3 +78,7 @@ export const ListItem = styled.li`
 export const Checkbox = styled.input`
  display: none;
 `;
+
+export const Label = styled.label`
+ cursor: pointer;
+`;
