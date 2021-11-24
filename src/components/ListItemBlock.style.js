@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import checkmark from "../assets/checkmark.png";
+import unchecked from "../assets/unchecked.png";
 
 export const TaskBlock = styled.div`
  width: 100%;
@@ -69,5 +70,11 @@ export const ListItem = styled.li`
   margin-bottom: 20px;
  }
 
- background: url(${checkmark}) no-repeat left;
+ background: url(${(props) => (props.isChecked ? checkmark : unchecked)})
+  no-repeat left;
+ background-size: 16px;
+`;
+
+export const Checkbox = styled.input`
+ display: none;
 `;
